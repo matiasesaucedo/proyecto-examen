@@ -23,24 +23,29 @@ public class Ejercicio2 {
             numero2 = unaCalculadora.nextInt();
             System.out.println("Ingrese la operacion a realizar (+, -, *, /): ");
             operacion = unaCalculadora.next();
-                switch (operacion) {
-                    case "+":
-                        resultado = calculos.sumar(numero1, numero2);
-                        System.out.println("El resultado es: " + resultado);
-                        break;
-                    case "-":
-                        resultado = calculos.restar(numero1, numero2);
-                        System.out.println("El resultado es: " + resultado);
-                        break;
-                    case "*":
-                        resultado = calculos.multiplicar(numero1, numero2);
-                        System.out.println("El resultado es: " + resultado);
-                        break;
-                    case "/":
-                        resultado = calculos.dividir(numero1, numero2);
-                        System.out.println("El resultado es: " + resultado);
+
+                if (operacion.equals("+")) {
+                    resultado = calculos.sumar(numero1, numero2);
+                    System.out.println("El resultado es: " + resultado);
                 }
-                if (resultado < 0) {
+
+                else if (operacion.equals("-")) {
+                    resultado = calculos.restar(numero1, numero2);
+                    System.out.println("El resultado es: " + resultado);
+                }
+                else if (operacion.equals("*")) {
+                    resultado = calculos.multiplicar(numero1, numero2);
+                    System.out.println("El resultado es: " + resultado);
+                }
+                else if (operacion.equals("/")) {
+                    resultado = calculos.dividir(numero1, numero2);
+                    System.out.println("El resultado es: " + resultado);
+                }
+                else {
+                    System.out.println("No puede realizarse la operación");
+                }
+
+        if (resultado < 0) {
                     System.out.println("El resultado es negativo, tene cuidado!");
                 }
                 if (resultado > 1000) {

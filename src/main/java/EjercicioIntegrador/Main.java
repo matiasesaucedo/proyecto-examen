@@ -15,7 +15,7 @@ public class Main {
 
 // Bucle While para la ejecucion repetitiva
         int contador = 0;
-        while (contador <= 5) {
+        while (contador < 5) {
             contador = contador + 1;
 
             Scanner unaCalculadora = new Scanner(System.in);
